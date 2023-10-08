@@ -19,9 +19,7 @@ function bindEmailCaptchaClick() {
             method: "POST",
             success: function (result) {
                 const code = result.code
-                if(code === 200) {
-                    alert("send success")
-                } else {
+                if(code !== 200) {
                     alert(result.message)
                 }
             },

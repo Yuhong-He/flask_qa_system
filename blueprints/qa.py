@@ -1,8 +1,8 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint("qa", __name__, url_prefix="/")
 
 
 @bp.route('/')
 def index():
-    pass
+    return render_template("index.html")
